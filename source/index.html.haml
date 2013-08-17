@@ -1,0 +1,104 @@
+---
+title:     hi.erinl.ee
+bodyclass: main
+---
+.back
+  .container
+    %section.intro
+      :markdown
+
+            html {
+              color: $near-black;
+              font-size: $base-font-size;
+              line-height: $base-line-height;
+            }
+
+            p {
+              margin: {
+                top: 0;
+                bottom: $baseline;
+              }
+            }
+            a {
+              color: $near-black;
+              border-bottom: 1px dashed $sunny-delight;
+              padding-bottom: 0.2em;
+              text-decoration: none;
+              &:hover {
+                color: $sunny-side;
+                text-decoration: none;
+              }
+            }
+
+            li {
+              list-style: none;
+            }
+            .center {
+              text-align: center;
+            }
+            footer{
+              margin-top: 3em;
+              text-align: right;
+            }
+            .container{
+              img{
+                max-width: 100%;
+                height: auto;
+              }
+            }
+            @include at-breakpoint($break-tablet){
+              .other-sites{
+                @include span-columns(8);
+                .erin-code{
+                  @include span-columns(4, 8);
+                }
+                .erin-camera{
+                  @include span-columns(4 omega, 8);
+                }
+              }  
+            }
+            @include at-breakpoint($break-desktop){
+              .other-sites{
+                @include span-columns(12);
+                .erin-code{
+                  @include span-columns(6, 12);
+                }
+                .erin-camera{
+                  @include span-columns(6 omega, 12);
+                 } 
+              }  
+            }
+      %h1 
+        hi.
+        %span.special-k> erin
+        l.ee
+      = image_tag("self-portrait.png")
+
+.container
+  %section.other-sites
+    .erin-code
+      .erin-code-border
+        %a{:href => "http://www.erinandcode.com", :target => "_blank"}
+          .erin-code-regular
+            %hgroup
+              %h2
+                code
+              %h6
+                erinandcode.com
+          .erin-code-hover
+            %hgroup
+              %h2 some thoughts on ruby,
+              %h2 css, & pixels
+
+    .erin-camera
+      .erin-camera-border
+        %a{:href => "http://www.erinandcamera.com", :target => "_blank"}
+          .erin-camera-regular  
+            %hgroup
+              %h2 camera
+              %h6 erinandcamera.com
+          .erin-camera-hover
+            %hgroup
+              %h3 pictures!
+              %h3 pictures!
+              %h3 pictures!

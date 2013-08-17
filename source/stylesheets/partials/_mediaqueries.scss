@@ -1,0 +1,69 @@
+// Breakpoint variables
+// =========================================================
+
+// Main Variables
+
+$XS: 320px; // iPhone 3, 4, & 5 portrait width
+$S: 480px; // iPhone 3 & 4 landscape width
+$M: 768px; // iPad portrait width
+$L: 1024px; // Kindle & iPad landscape width
+
+// Media Query Mixin 
+
+@mixin MQ($canvas) {
+	// ie: @include MQ(XS)
+	// @media only screen and (max-width: 319px)
+	@if $canvas == XS {
+		@media only screen and (max-width: $XS - 1) {
+			@content;
+		}
+	}
+	// @media only screen and (min-width: 320px)
+	@else if $canvas == XSplus {
+		@media only screen and (min-width: $XS) {
+			@content;
+		}
+	}
+	// @media only screen and (max-width: 479px)
+	@else if $canvas == S {
+		@media only screen and (max-width: $S - 1) {
+			@content;
+		}		
+	}	
+	// @media only screen and (min-width: 480px)
+	@else if $canvas == Splus {
+		@media only screen and (min-width: $S) {
+			@content;
+		}		
+	}	
+	// @media only screen and (max-width: 767px)
+	@else if $canvas == M {
+		@media only screen and (max-width: $M - 1) {
+			@content;
+		}		
+	}	
+	// @media only screen and (max-width: 959px)
+	@else if $canvas == Mt {
+		@media only screen and (max-width: $M2) {
+			@content;
+		}		
+	}	
+	// @media only screen and (min-width: 768px)
+	@else if $canvas == Mplus {
+		@media only screen and (min-width: $M) {
+			@content;
+		}		
+	}
+	// @media only screen and (max-width: 1023px)
+	@else if $canvas == L {
+		@media only screen and (max-width: $L - 1) {
+			@content;
+		}		
+	}
+	// @media only screen and (min-width: 1024px)
+	@else if $canvas == Lplus {
+		@media only screen and (min-width: $L) {
+			@content;
+		}		
+	}
+}

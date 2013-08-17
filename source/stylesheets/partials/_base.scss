@@ -1,0 +1,92 @@
+@import "compass";
+@import "h5bp";
+
+// HTML5 Boilerplate Styles
+@include h5bp-normalize;
+@include h5bp-base-styles;
+
+// HTML5 Boilerplate styling for Chrome Frame
+@include h5bp-chromeframe;
+
+// Susy Grid Systems - choose one to customize
+// @import "grid/fixed"
+@import "grid/magic";
+
+// Your own styles go here.
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $near-black;
+}
+
+body {
+  font-family: $body-font;
+  font-size: 1em;
+  line-height: 1.4;
+  border: 0;
+  background-color: $bg-color;
+}
+:focus, :active {  
+    outline: 0;  
+}  
+::-moz-selection {
+    background: $sunny-delight;
+    text-shadow: none;
+    color: $white;
+}
+
+::selection {
+		background: $sunny-delight;
+    text-shadow: none;
+    color: $white;
+}
+
+html {
+	color: $near-black;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+}
+
+p {
+	margin: {
+		top: 0;
+		bottom: $baseline;
+	}
+}
+
+a {
+	color: $near-black;
+	border-bottom: 1px dashed $sunny-delight;
+  padding-bottom: 0.2em;
+  text-decoration: none;
+
+	&:hover {
+		color: $sunny-side;
+		text-decoration: none;
+	}
+}
+
+li {
+	list-style: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.container{
+  // Force images to scale down to their container widths.
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// H5BP helper classes & mixins.
+// @include h5bp-helpers
+
+// Print styles.
+@include h5bp-media;

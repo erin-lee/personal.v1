@@ -1,0 +1,148 @@
+div, a {
+	@include transition (all 0.2s ease-in-out);
+}
+
+.back {
+	background: {
+		color: $bg-color;
+	}	
+}
+
+section.intro{
+	background: {
+		color: $intro-bg-color;
+	}
+	overflow: hidden;
+	pre {
+		color: $mid-gray;
+	}
+	img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding-right: 2em;
+		z-index: 99;
+	}
+	h1 {
+		padding-top: 2.2em;
+		margin-left: 3em;
+		font-size: 3em;
+		display: inline-block;
+		border-bottom: 4px solid $sunny-brown;
+		z-index: 90;
+		position: absolute;
+		top: 0;
+		color: $sunny-brown;
+		&:hover {
+			@include transition (all 0.2s ease-in-out);
+			color: $seafoam;
+			border-bottom: 4px dashed $seafoam;
+			.special-k {
+				color: darken($seafoam, 20%);
+			}
+		}
+		.special-k {
+			color: $sunny-pop;
+		}
+		@include MQ(M) {
+			margin: 4px auto;
+		}
+		@include MQ(S) {
+			margin: 1px auto;
+			padding-top: 1em;
+		}
+	}
+}
+
+section.other-sites {
+	background: {
+		color: $sites-bg-color;
+	}
+	padding-top: 1em;
+	margin-bottom: 1em;	
+}
+
+.erin-code-border, 
+.erin-camera-border {
+	margin-top: 1em;
+	text-align: center;
+	width: 100%;
+	height: 150px;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid $black;
+}
+
+.erin-code-border:hover .erin-code-regular,
+.erin-camera-border:hover .erin-camera-regular {
+	top: 150px;
+}
+
+.erin-code-border:hover .erin-code-hover, 
+.erin-camera-border:hover .erin-camera-hover {
+	top: 0;
+}
+
+.erin-code-regular, 
+.erin-camera-regular {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	background: none;
+}
+
+.erin-code-hover,
+.erin-camera-hover {
+	position:absolute;
+	width:100%;
+	height: 150px;
+	top: -150px;
+	left: 0;
+	background: $sunny-pop;
+}
+
+.erin-camera {
+	background: {
+		color: none;
+	}
+}
+
+section.quotes {
+	background-color: lighten($sunny-pop, 5%);
+	min-height: 25em;
+	padding-top: 3em;
+	color: $white;
+	.quote {
+		padding: 3em 5em;
+		@include MQ(S) {
+			padding: 2em;
+		}
+		.quoted {
+			font-size: 2.5em;
+			font-style: italic;
+			text-align: center;
+			@include MQ(S) {
+				font-size: 1.6em;
+			}
+		}
+		a.author {
+			font-size: 1.3em;
+			float: right;
+			color: $sunny-side;
+			@include MQ(S) {
+				font-size: 1em;
+			}		
+		}
+	}
+}
+
+
+footer {
+	text-align: center;
+	background-color: $sunny-pop;
+	.footer {
+		padding-top: 2em;
+	}
+}

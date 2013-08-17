@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// TYPOGRAPHY
+$josefin: "Josefin Slab", serif;
+$quicksand: "Quicksand", sans-serif;
+$raleway: "Raleway", sans-serif;
+$monteserrat: "Monteserrat", sans-serif;
+
+$title-font-size: 42px;
+$headline-font-size: 26px;
+$sub-headline-font-size: 20px;
+$base-font-size: 16px;
+$small-font-size: 13px;
+
+// VERTICAL RHYTHM
+$baseline: 25px;
+$base-line-height: ($baseline/$base-font-size);
+
+$heading-line-height: 1.2;
+
+// COLORS
+$white: #fff;
+$black: #000;
+$near-black: #252423;
+$light-gray: #E0E0E0;
+$mid-gray: #afafaf;
+$another-gray: #8e8e8e;
+
+$pink: #f59dbe;
+$dark-pink: #A93762;
+$light-pink: #fcb8d2;
+$medium-pink: #d45d8b;
+
+
+$sunny-delight: #FBC855;
+$sunny-side: #FDDFA0;
+$sunny-pop: #E6A636;
+$sunny-brown: #C6791E;
+
+$seafoam: #7accc8;
+
+// SITE WIDE
+$bg-color: $light-gray;
+$intro-bg-color: $light-gray;
+$sites-bg-color: none;
+
+$body-font: $quicksand;
