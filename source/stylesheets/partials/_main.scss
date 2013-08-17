@@ -115,28 +115,66 @@ section.quotes {
 	padding-top: 3em;
 	color: $white;
 	.quote {
-		padding: 3em 5em;
+		margin: 1em;
+		padding: 3em 0;
+		position: relative;
+		overflow: auto;
 		@include MQ(S) {
-			padding: 2em;
+			padding: 2em 0;
+		}
+		.arrows {
+			display: none;
+		}
+		.dots {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 20px;
+			li {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin: 0 4px;
+
+				text-indent: -999em;
+
+				border: 2px solid #fff;
+				border-radius: 6px;
+
+				cursor: pointer;
+				opacity: .4;
+
+				-webkit-transition: background .5s, opacity .5s;
+				-moz-transition: background .5s, opacity .5s;
+				transition: background .5s, opacity .5s;
+				&.active {
+					background: #fff;
+					opacity: 1;					
+				}
+			}
+		}
+		li {
+			list-style: none;
+		}
+		ul li {
+			float: left;
+			text-align: center;
 		}
 		.quoted {
-			font-size: 2.5em;
+			font-size: 2em;
 			font-style: italic;
-			text-align: center;
-			@include MQ(S) {
+			width: 90%;
+			@include MQ(M) {
 				font-size: 1.6em;
 			}
 		}
-		a.author {
+		.author {
 			font-size: 1.3em;
-			float: right;
 			color: $sunny-side;
-			@include MQ(S) {
-				font-size: 1em;
-			}		
 		}
 	}
 }
+
 
 
 footer {
