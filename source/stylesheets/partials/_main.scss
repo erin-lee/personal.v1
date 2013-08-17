@@ -114,68 +114,38 @@ section.quotes {
 	min-height: 25em;
 	padding-top: 3em;
 	color: $white;
-	.quote {
-		margin: 1em;
-		padding: 3em 0;
-		position: relative;
-		overflow: auto;
+}
+
+#quote {
+	margin: 1em;
+	.quote-item {
+		padding: 3em 2em;			
 		@include MQ(S) {
 			padding: 2em 0;
 		}
-		.arrows {
-			display: none;
+	}
+	.quoted {
+		font-size: 2em;
+		font-style: italic;
+		text-align: center;
+		@include MQ(M) {
+			font-size: 1.6em;
+			text-align: left;
 		}
-		.dots {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 20px;
-			li {
-				display: inline-block;
-				width: 10px;
-				height: 10px;
-				margin: 0 4px;
-
-				text-indent: -999em;
-
-				border: 2px solid #fff;
-				border-radius: 6px;
-
-				cursor: pointer;
-				opacity: .4;
-
-				-webkit-transition: background .5s, opacity .5s;
-				-moz-transition: background .5s, opacity .5s;
-				transition: background .5s, opacity .5s;
-				&.active {
-					background: #fff;
-					opacity: 1;					
-				}
-			}
+		@include MQ(XS) {
+			font-size: 0.8em;
 		}
-		li {
-			list-style: none;
-		}
-		ul li {
-			float: left;
-			text-align: center;
-		}
-		.quoted {
-			font-size: 2em;
-			font-style: italic;
-			width: 90%;
-			@include MQ(M) {
-				font-size: 1.6em;
-			}
-		}
-		.author {
-			font-size: 1.3em;
-			color: $sunny-side;
+	}
+	.author {
+		font-size: 1.3em;
+		color: $sunny-side;
+		float: right;
+		right: 2px;
+		@include MQ(S) {
+			float: none;
 		}
 	}
 }
-
-
 
 footer {
 	text-align: center;

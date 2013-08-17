@@ -144,10 +144,17 @@ if (!(window.console && console.log)) {
 }); 
 
 // Place any jQuery/helper plugins in here.
-$(function() {
-    $('.quote').unslider({
-    	keys: true,
-			arrows: true,
-			dots: true
-    });
+$(document).ready(function() {
+ 
+  $("#quote").owlCarousel({
+    navigation: true,
+    items: 1,      
+    itemsDesktop : false,
+    itemsDesktopSmall : false,
+    itemsTablet: false,
+    itemsMobile : false,
+    pagination: true,
+    goToFirst: false
+  });
+ 
 });
