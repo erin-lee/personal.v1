@@ -19,6 +19,7 @@
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
     = stylesheet_link_tag "styles"
+    = stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
     = javascript_include_tag "libs/modernizr-2.6.1.min"
 
   %body{:id => current_page.data.bodyid}
@@ -31,6 +32,14 @@
       = yield
 
     = partial 'quotes'
+    
+    = partial 'twitter'
+
+    = partial 'github'
+    
+    = partial 'instagram'
+    
+    = partial 'flickr'
 
     = partial 'footer'
 

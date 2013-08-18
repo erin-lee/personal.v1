@@ -1,0 +1,15 @@
+%section.instagram
+	.container
+		%h1.section-title 
+			\-
+			%i.icon-instagram
+			\-
+		%h2 Instagram's my jam.
+		%h5 and these are my favorites
+		#instagram.owl-carousel			
+			- (1..7).each do |instagram|
+				.instagram-item
+					= image_tag("instagram-#{instagram}.jpg")
+			.instagram-item-more
+				%p more here ...
+				%a{:target=> "_blank", :href => "http://instagram.com/erinandiphone"} @erinandiphone

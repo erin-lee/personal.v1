@@ -58,7 +58,7 @@ section.other-sites {
 	background: {
 		color: $sites-bg-color;
 	}
-	padding-top: 1em;
+	padding: 2em 0 3em;
 	margin-bottom: 1em;	
 }
 
@@ -107,14 +107,124 @@ section.other-sites {
 	background: {
 		color: none;
 	}
+	.icon-camera {
+		font-size: 3em;
+		position: relative;
+		top: 18px;
+	}
 }
 
+.section-title {
+	text-align:center;
+	margin: 0;
+	opacity: 0.5;
+	color: $white;
+	&:hover {
+		opacity: 1;
+	}
+}
+h2 {
+	margin-bottom: 0;
+}
+h5 {
+	font-weight: normal;
+	font-size: 0.9em;
+	margin: 0 0 2em 0;
+}	
 section.quotes {
-	background-color: lighten($sunny-pop, 5%);
+	background-color: lighten($sunny-pop, 25%);
+	min-height: 25em;
+	padding: 3em 0;
+	color: $sunny-brown;
+	h1 {
+		color: $sunny-brown;	
+	}
+}
+
+section.twitter {
+	background-color: lighten($sunny-pop, 20%);
+	min-height: 25em;
+	padding-top: 3em;
+	color: $sunny-brown;	
+	h1 {
+		color: $sunny-brown;	
+	}
+}
+
+.twitter-item {
+	text-align: center;
+	padding: 2em;
+}
+
+.twitter-quote {
+	font-size: 2em;
+	@include MQ(M) {
+		font-size: 1.3em;
+	}
+	a {
+		color: $sunny-brown;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+section.github {
+	background-color: lighten($sunny-pop, 10%);
 	min-height: 25em;
 	padding-top: 3em;
 	color: $white;
 }
+
+section.instagram {
+	background-color: lighten($sunny-pop, 5%);
+	min-height: 25em;
+	padding: 3em 0;
+	color: $white;
+	.owl-controlls {
+		padding-top: 2em;
+	}
+}
+
+section.flickr {
+	background-color: $sunny-pop;
+	min-height: 25em;
+	padding: 3em 0;
+	color: $white;
+	.owl-controlls {
+		padding-top: 2em;
+	}
+}
+
+.github-item {
+	padding: 4em 2em;
+	font-size: 1.3em;
+}
+
+#instagram {
+	margin: 1em 0;	
+}
+
+.instagram-item, .flickr-item {
+	margin-right: 1em;
+	opacity: 0.4;
+	&:hover {
+		opacity: 1;
+	}
+	img {
+		@include border-radius(40px, 40px);
+	}
+}
+.instagram-item-more, .flickr-item-more {
+	@include border-radius(40px, 40px);
+	text-align: center;
+	padding: 5em 0;
+	a {
+		padding: auto 0;
+		color: $white;
+	}
+}
+
 
 #quote {
 	margin: 1em;
@@ -138,7 +248,7 @@ section.quotes {
 	}
 	.author {
 		font-size: 1.3em;
-		color: $sunny-side;
+		// color: $sunny-side;
 		float: right;
 		right: 2px;
 		@include MQ(S) {
@@ -149,7 +259,7 @@ section.quotes {
 
 footer {
 	text-align: center;
-	background-color: $sunny-pop;
+	background-color: darken($sunny-pop, 8%);
 	.footer {
 		padding-top: 2em;
 	}

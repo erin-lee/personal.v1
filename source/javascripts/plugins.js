@@ -155,6 +155,28 @@ $(document).ready(function() {
     itemsMobile : false,
     pagination: true,
     goToFirst: false
+  }); 
+
+  $("#instagram").owlCarousel({
+    navigation: false,
+    items: 4,      
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall : [979,3],
+    itemsTablet: [768, 2],
+    itemsMobile : [480, 1],
+    pagination: true,
+    goToFirst: false
+  });
+ 
+  $("#flickr").owlCarousel({
+    navigation: true,
+    items: 2,      
+    itemsDesktop : [1199,2],
+    itemsDesktopSmall : [979,1],
+    itemsTablet: [768, 1],
+    itemsMobile : [480, 1],
+    pagination: true,
+    goToFirst: false
   });
  
 });
