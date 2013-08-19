@@ -46,29 +46,7 @@ bodyclass: main
                 height: auto;
               }
             }
-            @include at-breakpoint($break-tablet){
-              .other-sites{
-                @include span-columns(8);
-                .erin-code{
-                  @include span-columns(4, 8);
-                }
-                .erin-camera{
-                  @include span-columns(4 omega, 8);
-                }
-              }  
-            }
-            @include at-breakpoint($break-desktop){
-              .other-sites{
-                @include span-columns(12);
-                .erin-code{
-                  @include span-columns(6, 12);
-                }
-                .erin-camera{
-                  @include span-columns(6 omega, 12);
-                 } 
-              }  
-            }
-      %h1 
+      %h1.fadeInDown.animated
         hi.
         %span.special-k> erin
         l.ee
